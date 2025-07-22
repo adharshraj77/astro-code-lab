@@ -12,40 +12,140 @@ const Hero = () => {
     <section id="home" className="relative min-h-screen flex items-center justify-center hero-bg overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Large Floating Orbs */}
         <motion.div
-          className="absolute -top-40 -right-40 w-80 h-80 bg-primary/20 rounded-full blur-3xl"
+          className="absolute -top-40 -right-40 w-80 h-80 bg-primary/30 rounded-full blur-3xl"
           animate={{
-            scale: [1, 1.2, 1],
-            rotate: [0, 180, 360],
+            scale: [1, 1.3, 1],
+            rotate: [0, 360],
+            x: [0, 50, 0],
+            y: [0, -30, 0],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div
+          className="absolute -bottom-40 -left-40 w-96 h-96 bg-secondary/30 rounded-full blur-3xl"
+          animate={{
+            scale: [1.2, 0.8, 1.2],
+            rotate: [0, -360],
+            x: [0, -40, 0],
+            y: [0, 60, 0],
           }}
           transition={{
             duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div
+          className="absolute top-1/3 right-1/4 w-60 h-60 bg-accent/20 rounded-full blur-2xl"
+          animate={{
+            scale: [1, 1.4, 1],
+            opacity: [0.2, 0.7, 0.2],
+            rotate: [0, 180, 360],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        {/* Floating Geometric Shapes */}
+        <motion.div
+          className="absolute top-1/4 left-1/3 w-16 h-16 border-2 border-primary/50 rotate-45"
+          animate={{
+            rotate: [45, 225, 405],
+            x: [0, 100, 0],
+            y: [0, -50, 0],
+            opacity: [0.3, 0.8, 0.3],
+          }}
+          transition={{
+            duration: 18,
             repeat: Infinity,
             ease: "linear"
           }}
         />
         <motion.div
-          className="absolute -bottom-40 -left-40 w-96 h-96 bg-secondary/20 rounded-full blur-3xl"
+          className="absolute top-2/3 right-1/3 w-12 h-12 bg-secondary/40 rounded-full"
           animate={{
-            scale: [1.2, 1, 1.2],
-            rotate: [360, 180, 0],
+            scale: [1, 1.5, 1],
+            x: [-20, 80, -20],
+            y: [0, -100, 0],
+            rotate: [0, 360],
+          }}
+          transition={{
+            duration: 14,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div
+          className="absolute bottom-1/4 left-1/4 w-8 h-20 bg-accent/60 rounded-full blur-sm"
+          animate={{
+            rotate: [0, 180, 360],
+            x: [0, -60, 0],
+            y: [0, 40, 0],
+            scaleY: [1, 1.5, 1],
+          }}
+          transition={{
+            duration: 16,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        {/* Floating Particles */}
+        {Array.from({ length: 15 }).map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 bg-primary/60 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -20, 0],
+              x: [0, Math.random() * 40 - 20, 0],
+              opacity: [0.2, 1, 0.2],
+              scale: [0.5, 1.2, 0.5],
+            }}
+            transition={{
+              duration: 3 + Math.random() * 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: Math.random() * 2,
+            }}
+          />
+        ))}
+        
+        {/* Rotating Rings */}
+        <motion.div
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-secondary/20 rounded-full"
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 30,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
+        <motion.div
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-primary/15 rounded-full"
+          animate={{
+            rotate: [360, 0],
+            scale: [1.1, 1, 1.1],
           }}
           transition={{
             duration: 25,
             repeat: Infinity,
             ease: "linear"
-          }}
-        />
-        <motion.div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-accent/10 rounded-full blur-2xl"
-          animate={{
-            scale: [1, 1.5, 1],
-            opacity: [0.3, 0.6, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
           }}
         />
       </div>

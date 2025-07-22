@@ -7,45 +7,45 @@ All colors in HSL format for perfect theming control */
 
 @layer base {
   :root {
-    /* Dark Futuristic Base Colors */
-    --background: 248 76% 11%;           /* #0f0c29 */
-    --background-secondary: 248 44% 25%; /* #302b63 */
-    --background-tertiary: 248 28% 19%;  /* #24243e */
-    --foreground: 0 0% 98%;              /* Near white text */
+    /* Ultra Dark Base Colors */
+    --background: 0 0% 3%;               /* Almost black #080808 */
+    --background-secondary: 240 8% 8%;   /* Very dark blue-gray #131318 */
+    --background-tertiary: 240 6% 12%;   /* Slightly lighter dark #1e1e23 */
+    --foreground: 0 0% 95%;              /* Light text */
 
-    /* Glassmorphism Cards */
-    --card: 248 76% 11% / 0.8;           /* Semi-transparent dark */
-    --card-foreground: 0 0% 95%;
-    --card-border: 0 0% 100% / 0.1;      /* Subtle glass border */
+    /* Dark Glassmorphism Cards */
+    --card: 240 8% 8% / 0.7;             /* Semi-transparent very dark */
+    --card-foreground: 0 0% 92%;
+    --card-border: 240 20% 25% / 0.15;   /* Subtle colored border */
 
     /* Popover/Modal */
-    --popover: 248 76% 8%;               /* Darker for modals */
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 2%;                  /* Near black for modals */
+    --popover-foreground: 0 0% 95%;
 
-    /* Neon Electric Blue Primary */
-    --primary: 218 100% 60%;             /* Electric blue #0099ff */
-    --primary-glow: 218 100% 70%;        /* Lighter blue for glow */
-    --primary-foreground: 0 0% 2%;       /* Dark text on blue */
+    /* Cyberpunk Cyan Primary */
+    --primary: 180 100% 50%;             /* Bright cyan #00ffff */
+    --primary-glow: 180 100% 60%;        /* Lighter cyan for glow */
+    --primary-foreground: 0 0% 5%;       /* Dark text on cyan */
 
-    /* Neon Violet Secondary */
-    --secondary: 270 100% 65%;           /* Neon violet #8a2be2 */
-    --secondary-glow: 270 100% 75%;      /* Lighter violet */
-    --secondary-foreground: 0 0% 98%;
+    /* Electric Purple Secondary */
+    --secondary: 280 100% 60%;           /* Electric purple #9933ff */
+    --secondary-glow: 280 100% 70%;      /* Lighter purple */
+    --secondary-foreground: 0 0% 95%;
 
-    /* Neon Green Accent */
-    --accent: 120 100% 50%;              /* Neon green #00ff00 */
-    --accent-glow: 120 100% 60%;         /* Lighter green glow */
+    /* Neon Pink Accent */
+    --accent: 330 100% 60%;              /* Hot pink #ff3399 */
+    --accent-glow: 330 100% 70%;         /* Lighter pink glow */
     --accent-foreground: 0 0% 5%;
 
     /* Muted Dark Elements */
-    --muted: 248 44% 15%;                /* Darker muted */
-    --muted-foreground: 0 0% 70%;        /* Light gray text */
+    --muted: 240 6% 10%;                 /* Very dark muted */
+    --muted-foreground: 0 0% 65%;        /* Light gray text */
 
     /* Form Elements */
-    --input: 248 44% 15%;                /* Dark input bg */
-    --input-border: 0 0% 100% / 0.2;     /* Glowing input border */
-    --border: 0 0% 100% / 0.15;          /* General borders */
-    --ring: 218 100% 60%;                /* Focus ring = primary */
+    --input: 240 8% 8%;                  /* Very dark input bg */
+    --input-border: 180 100% 50% / 0.3;  /* Cyan glowing border */
+    --border: 240 20% 25% / 0.2;         /* Subtle colored borders */
+    --ring: 180 100% 50%;                /* Cyan focus ring */
 
     /* Status Colors */
     --destructive: 0 84% 60%;            /* Red for errors */
@@ -59,9 +59,9 @@ All colors in HSL format for perfect theming control */
     --border-radius: 0.75rem;            /* Rounded corners */
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(248, 76%, 11%), hsl(248, 44%, 25%), hsl(248, 28%, 19%));
-    --gradient-neon: linear-gradient(45deg, hsl(218, 100%, 60%), hsl(270, 100%, 65%), hsl(120, 100%, 50%));
-    --gradient-card: linear-gradient(135deg, hsl(248, 76%, 11% / 0.9), hsl(248, 44%, 15% / 0.7));
+    --gradient-primary: linear-gradient(135deg, hsl(0, 0%, 3%), hsl(240, 8%, 8%), hsl(240, 6%, 12%));
+    --gradient-neon: linear-gradient(45deg, hsl(180, 100%, 50%), hsl(280, 100%, 60%), hsl(330, 100%, 60%));
+    --gradient-card: linear-gradient(135deg, hsl(240, 8%, 8% / 0.8), hsl(240, 6%, 12% / 0.6));
 
     --radius: 0.75rem;
 
