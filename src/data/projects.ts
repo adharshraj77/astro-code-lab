@@ -56,7 +56,7 @@ export const projects: Project[] = [
     tech: ["Python", "TensorFlow", "Keras", "yfinance", "Streamlit"],
     image: "/project-images/stock.jpg",
     notebooks: [
-      "https://nbviewer.org/urls/raw.githubusercontent.com/example/stock-lstm.ipynb"
+      "https://nbviewer.org/urls/raw.githubusercontent.com/adharshraj77/Stellar-Classification/main/Stellar_Classification.ipynb"
     ],
     github: "https://github.com/example/stock-prediction",
     live: "https://stock-predictor.streamlit.app"
