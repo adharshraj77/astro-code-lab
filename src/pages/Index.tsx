@@ -4,7 +4,6 @@ import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
-import Certifications from '@/components/Certifications';
 import Contact from '@/components/Contact';
 
 const Index = () => {
@@ -28,12 +27,82 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-primary">
+    <div className="min-h-screen bg-gradient-primary relative overflow-hidden">
+      {/* Relaxing Animated Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Floating Orbs */}
+        <motion.div
+          className="absolute top-10 left-10 w-32 h-32 bg-accent/10 rounded-full blur-xl"
+          animate={{
+            y: [0, -20, 0],
+            x: [0, 10, 0],
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute top-1/3 right-20 w-24 h-24 bg-primary/10 rounded-full blur-xl"
+          animate={{
+            y: [0, 15, 0],
+            x: [0, -15, 0],
+            scale: [1, 0.9, 1],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute bottom-1/4 left-1/3 w-20 h-20 bg-secondary/10 rounded-full blur-xl"
+          animate={{
+            y: [0, -25, 0],
+            x: [0, 20, 0],
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        
+        {/* Gentle Geometric Shapes */}
+        <motion.div
+          className="absolute top-1/2 left-1/4 w-1 h-20 bg-accent/20 rounded-full"
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+        <motion.div
+          className="absolute bottom-1/3 right-1/3 w-16 h-1 bg-primary/20 rounded-full"
+          animate={{
+            rotate: [0, -360],
+            scale: [1, 0.8, 1],
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+      </div>
+      
       {/* Navigation */}
       <Navigation />
       
       {/* Page Content */}
-      <main>
+      <main className="relative z-10">
         {/* Hero Section */}
         <Hero />
         
@@ -42,9 +111,6 @@ const Index = () => {
         
         {/* Projects Section - Core Feature */}
         <Projects />
-        
-        {/* Certifications Section */}
-        <Certifications />
         
         {/* Contact Section */}
         <Contact />
