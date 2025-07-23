@@ -28,74 +28,176 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-primary relative overflow-hidden">
-      {/* Relaxing Animated Background */}
-      <div className="absolute inset-0 pointer-events-none">
-        {/* Floating Orbs */}
+      {/* Epic Animated Background */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Morphing Gradient Orbs */}
         <motion.div
-          className="absolute top-10 left-10 w-32 h-32 bg-accent/10 rounded-full blur-xl"
+          className="absolute -top-20 -left-20 w-96 h-96 bg-gradient-to-br from-accent/20 via-primary/15 to-secondary/10 rounded-full blur-3xl"
           animate={{
-            y: [0, -20, 0],
-            x: [0, 10, 0],
-            scale: [1, 1.1, 1],
+            scale: [1, 1.3, 0.8, 1.1, 1],
+            rotate: [0, 90, 180, 270, 360],
+            x: [0, 100, -50, 80, 0],
+            y: [0, -80, 40, -30, 0],
           }}
           transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute top-1/3 right-20 w-24 h-24 bg-primary/10 rounded-full blur-xl"
-          animate={{
-            y: [0, 15, 0],
-            x: [0, -15, 0],
-            scale: [1, 0.9, 1],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-1/4 left-1/3 w-20 h-20 bg-secondary/10 rounded-full blur-xl"
-          animate={{
-            y: [0, -25, 0],
-            x: [0, 20, 0],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: 15,
+            duration: 25,
             repeat: Infinity,
             ease: "easeInOut",
           }}
         />
         
-        {/* Gentle Geometric Shapes */}
         <motion.div
-          className="absolute top-1/2 left-1/4 w-1 h-20 bg-accent/20 rounded-full"
+          className="absolute top-1/4 right-0 w-80 h-80 bg-gradient-to-bl from-primary/25 via-accent/20 to-secondary/15 rounded-full blur-3xl"
+          animate={{
+            scale: [0.8, 1.2, 1, 1.4, 0.8],
+            rotate: [360, 270, 180, 90, 0],
+            x: [0, -120, 60, -90, 0],
+            y: [0, 100, -70, 50, 0],
+          }}
+          transition={{
+            duration: 30,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        
+        <motion.div
+          className="absolute bottom-0 left-1/4 w-72 h-72 bg-gradient-to-tr from-secondary/20 via-accent/15 to-primary/25 rounded-full blur-3xl"
+          animate={{
+            scale: [1.1, 0.9, 1.3, 1, 1.1],
+            rotate: [0, -90, -180, -270, -360],
+            x: [0, 150, -80, 120, 0],
+            y: [0, -60, 90, -40, 0],
+          }}
+          transition={{
+            duration: 35,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+
+        {/* Floating Geometric Shapes */}
+        <motion.div
+          className="absolute top-1/3 left-1/5 w-4 h-20 bg-gradient-to-b from-accent/40 to-transparent rounded-full"
           animate={{
             rotate: [0, 360],
-            scale: [1, 1.1, 1],
+            scale: [1, 1.5, 0.5, 1.2, 1],
+            x: [0, 200, -100, 150, 0],
+            y: [0, -150, 80, -200, 0],
           }}
           transition={{
-            duration: 20,
+            duration: 40,
             repeat: Infinity,
             ease: "linear",
           }}
         />
+        
         <motion.div
-          className="absolute bottom-1/3 right-1/3 w-16 h-1 bg-primary/20 rounded-full"
+          className="absolute bottom-1/3 right-1/4 w-20 h-4 bg-gradient-to-r from-primary/40 to-transparent rounded-full"
           animate={{
             rotate: [0, -360],
-            scale: [1, 0.8, 1],
+            scale: [1, 0.8, 1.4, 0.9, 1],
+            x: [0, -180, 120, -220, 0],
+            y: [0, 100, -160, 140, 0],
           }}
           transition={{
-            duration: 25,
+            duration: 45,
             repeat: Infinity,
             ease: "linear",
           }}
         />
+
+        {/* Pulsing Energy Rings */}
+        <motion.div
+          className="absolute top-1/2 left-1/2 w-40 h-40 border border-accent/20 rounded-full"
+          style={{ translateX: '-50%', translateY: '-50%' }}
+          animate={{
+            scale: [1, 2, 1],
+            opacity: [0.8, 0, 0.8],
+            rotate: [0, 360],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeOut",
+          }}
+        />
+        
+        <motion.div
+          className="absolute top-1/2 left-1/2 w-60 h-60 border border-primary/15 rounded-full"
+          style={{ translateX: '-50%', translateY: '-50%' }}
+          animate={{
+            scale: [1, 2.5, 1],
+            opacity: [0.6, 0, 0.6],
+            rotate: [360, 0],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeOut",
+            delay: 2,
+          }}
+        />
+
+        {/* Floating Data Particles */}
+        {Array.from({ length: 8 }).map((_, i) => (
+          <motion.div
+            key={i}
+            className={`absolute w-2 h-2 rounded-full ${
+              i % 3 === 0 ? 'bg-accent/60' : i % 3 === 1 ? 'bg-primary/60' : 'bg-secondary/60'
+            }`}
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -300, 0],
+              x: [0, Math.random() * 200 - 100, 0],
+              opacity: [0, 1, 0],
+              scale: [0.5, 1.5, 0.5],
+            }}
+            transition={{
+              duration: 8 + Math.random() * 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: Math.random() * 5,
+            }}
+          />
+        ))}
+
+        {/* Spiraling Data Streams */}
+        <motion.div
+          className="absolute top-0 left-0 w-full h-full"
+          animate={{ rotate: 360 }}
+          transition={{
+            duration: 120,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        >
+          {Array.from({ length: 3 }).map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-1 h-40 bg-gradient-to-b from-transparent via-accent/30 to-transparent rounded-full"
+              style={{
+                left: '50%',
+                top: '50%',
+                transformOrigin: '0 0',
+                transform: `rotate(${i * 120}deg)`,
+              }}
+              animate={{
+                scaleY: [0.5, 1.5, 0.5],
+                opacity: [0.3, 0.8, 0.3],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: i * 1.3,
+              }}
+            />
+          ))}
+        </motion.div>
       </div>
       
       {/* Navigation */}
