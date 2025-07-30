@@ -25,10 +25,12 @@ export const projects: Project[] = [
     tech: ["Python", "Scikit-learn", "Matplotlib", "Plotly", "Pandas"],
     image: "/project-images/fifa.jpg",
     notebooks: [
-      "https://nbviewer.org/urls/raw.githubusercontent.com/example/fifa-cluster1.ipynb",
-      "https://nbviewer.org/urls/raw.githubusercontent.com/example/fifa-cluster2.ipynb"
+      "https://nbviewer.org/urls/raw.githubusercontent.com/adharshraj77/FIFA_Anlysis/main/FIFA_preprocessing_FeatureEngineering.ipynb",
+      "https://nbviewer.org/urls/raw.githubusercontent.com/adharshraj77/FIFA_Anlysis/main/FIFA_EDAnlysis.ipynb",
+      "https://nbviewer.org/urls/raw.githubusercontent.com/adharshraj77/FIFA_Anlysis/main/FIFA_Modeling_.ipynb"
+      
     ],
-    github: "https://github.com/example/fifa-clustering",
+    github: "https://github.com/adharshraj77/FIFA_Anlysis/tree/main",
     live: "https://fifa-cluster.streamlit.app",
     featured: true
   },
