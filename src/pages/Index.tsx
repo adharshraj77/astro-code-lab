@@ -207,12 +207,14 @@ const Index = () => {
       <main className="relative z-10">
         {/* Hero Section */}
         <Hero />
-        
-        {/* Skills Section */}
-{/*         <Skills /> */}
-        
+
         {/* Projects Section - Core Feature */}
         <Projects />
+        
+        {/* Skills Section */}
+        <Skills />
+        
+
         
         {/* Contact Section */}
         <Contact />
