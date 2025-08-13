@@ -209,7 +209,7 @@ const Index = () => {
         <Hero />
         
         {/* Skills Section */}
-        <Skills />
+{/*         <Skills /> */}
         
         {/* Projects Section - Core Feature */}
         <Projects />
