@@ -45,7 +45,7 @@ const Navigation = () => {
             transition={{ delay: 0.2 }}
             className="text-2xl font-orbitron font-bold"
           >
-            <span className="text-gradient">AK</span>
+            <span className="text-gradient">ARaj</span>
           </motion.div>
 
           {/* Desktop Navigation */}
