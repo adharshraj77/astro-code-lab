@@ -66,166 +66,359 @@ const Hero = () => {
       animate="visible"
       variants={containerVariants}
     >
-      {/* Enhanced Data Science Background */}
-      <div className="absolute inset-0 overflow-hidden opacity-50">
-        {/* Animated Grid Pattern */}
+      {/* Epic Enhanced Data Science Background */}
+      <div className="absolute inset-0 overflow-hidden opacity-60">
+        {/* Multi-layered Animated Grid Pattern */}
         <motion.div 
           className="absolute inset-0" 
           style={{
             backgroundImage: `
-              linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(59, 130, 246, 0.15) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(59, 130, 246, 0.15) 1px, transparent 1px),
+              radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.08), transparent 70%)
             `,
-            backgroundSize: '50px 50px'
+            backgroundSize: '50px 50px, 50px 50px, 300px 300px'
           }}
           animate={{
-            backgroundPosition: ['0 0', '50px 50px'],
+            backgroundPosition: ['0 0, 0 0, 0 0', '50px 50px, -50px -50px, 100px 100px'],
           }}
           transition={{
-            duration: 20,
+            duration: 25,
             repeat: Infinity,
             ease: "linear"
           }}
         />
-        
-        {/* Enhanced Floating Data Science Icons */}
+
+        {/* Floating Geometric Shapes */}
         <motion.div
-          className="absolute top-1/4 left-1/6 text-primary/40"
+          className="absolute top-1/6 left-1/12 w-12 h-12 border-2 border-primary/30 rounded-lg"
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.2, 0.8, 1],
+            x: [0, 50, -30, 0],
+            y: [0, -40, 20, 0],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+
+        <motion.div
+          className="absolute top-1/5 right-1/8 w-8 h-16 bg-gradient-to-b from-secondary/40 to-transparent rounded-full"
+          animate={{
+            rotate: [0, 180, 360],
+            scale: [1, 1.5, 0.7, 1.2, 1],
+            x: [0, -60, 40, 0],
+            y: [0, 30, -50, 0],
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2
+          }}
+        />
+
+        <motion.div
+          className="absolute bottom-1/6 left-1/4 w-10 h-10 bg-accent/30 rounded-full"
+          animate={{
+            scale: [0.5, 2, 1],
+            opacity: [0.3, 0.8, 0.3],
+            x: [0, 80, -40, 0],
+            y: [0, -60, 30, 0],
+          }}
+          transition={{
+            duration: 22,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 4
+          }}
+        />
+        
+        {/* Enhanced Floating Data Science Icons with More Motion */}
+        <motion.div
+          className="absolute top-1/4 left-1/6 text-primary/50"
           initial={{ scale: 0, rotate: -180 }}
           animate={{
-            scale: 1,
-            rotate: 0,
-            y: [0, -15, 0],
-            rotateZ: [0, 10, 0]
+            scale: [1, 1.3, 0.9, 1.1, 1],
+            rotate: [0, 45, -30, 15, 0],
+            y: [0, -25, 10, -15, 0],
+            x: [0, 15, -10, 20, 0],
+            rotateZ: [0, 15, -10, 8, 0]
           }}
           transition={{ 
             scale: { type: "spring", damping: 15, stiffness: 120, delay: 1.5 },
             rotate: { type: "spring", damping: 15, stiffness: 120, delay: 1.5 },
-            y: { duration: 6, repeat: Infinity, ease: "easeInOut" },
-            rotateZ: { duration: 6, repeat: Infinity, ease: "easeInOut" }
+            y: { duration: 8, repeat: Infinity, ease: "easeInOut" },
+            x: { duration: 12, repeat: Infinity, ease: "easeInOut", delay: 1 },
+            rotateZ: { duration: 10, repeat: Infinity, ease: "easeInOut" }
           }}
         >
-          <Database size={36} />
+          <Database size={42} />
         </motion.div>
         
         <motion.div
-          className="absolute top-1/3 right-1/5 text-secondary/40"
+          className="absolute top-1/3 right-1/5 text-secondary/50"
           initial={{ scale: 0, rotate: -180 }}
           animate={{
-            scale: 1,
-            rotate: 0,
-            y: [0, -20, 0],
-            rotateZ: [0, -15, 0]
+            scale: [1, 0.8, 1.4, 1],
+            rotate: [0, -60, 30, 0],
+            y: [0, -30, 15, -20, 0],
+            x: [0, -20, 25, -15, 0],
+            rotateZ: [0, -20, 12, -8, 0]
           }}
           transition={{ 
             scale: { type: "spring", damping: 15, stiffness: 120, delay: 2 },
             rotate: { type: "spring", damping: 15, stiffness: 120, delay: 2 },
-            y: { duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 },
-            rotateZ: { duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }
+            y: { duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 },
+            x: { duration: 14, repeat: Infinity, ease: "easeInOut", delay: 2 },
+            rotateZ: { duration: 12, repeat: Infinity, ease: "easeInOut", delay: 1 }
           }}
         >
-          <Brain size={32} />
+          <Brain size={38} />
         </motion.div>
         
         <motion.div
-          className="absolute bottom-1/3 left-1/5 text-accent/40"
+          className="absolute bottom-1/3 left-1/5 text-accent/50"
           initial={{ scale: 0, rotate: -180 }}
           animate={{
-            scale: 1,
-            rotate: 0,
-            y: [0, -18, 0],
-            rotateZ: [0, 8, 0]
+            scale: [1, 1.2, 0.9, 1.3, 1],
+            rotate: [0, 90, -45, 60, 0],
+            y: [0, -25, 20, -18, 0],
+            x: [0, 30, -15, 25, 0],
+            rotateZ: [0, 12, -15, 10, 0]
           }}
           transition={{ 
             scale: { type: "spring", damping: 15, stiffness: 120, delay: 2.5 },
             rotate: { type: "spring", damping: 15, stiffness: 120, delay: 2.5 },
-            y: { duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 },
-            rotateZ: { duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 }
+            y: { duration: 9, repeat: Infinity, ease: "easeInOut", delay: 2 },
+            x: { duration: 16, repeat: Infinity, ease: "easeInOut", delay: 3 },
+            rotateZ: { duration: 11, repeat: Infinity, ease: "easeInOut", delay: 2 }
           }}
         >
-          <BarChart3 size={34} />
+          <BarChart3 size={40} />
         </motion.div>
 
-        {/* Additional floating icons */}
+        {/* More floating icons with complex animations */}
         <motion.div
-          className="absolute top-1/2 right-1/6 text-primary/30"
+          className="absolute top-1/2 right-1/6 text-primary/40"
           initial={{ scale: 0, rotate: -180 }}
           animate={{
-            scale: 1,
-            rotate: 0,
-            y: [0, -12, 0],
-            rotateZ: [0, -8, 0]
+            scale: [1, 1.4, 0.8, 1.2, 1],
+            rotate: [0, -120, 60, -30, 0],
+            y: [0, -20, 25, -12, 0],
+            x: [0, -25, 35, -20, 0],
+            rotateZ: [0, -12, 18, -8, 0]
           }}
           transition={{ 
             scale: { type: "spring", damping: 15, stiffness: 120, delay: 3 },
             rotate: { type: "spring", damping: 15, stiffness: 120, delay: 3 },
-            y: { duration: 9, repeat: Infinity, ease: "easeInOut", delay: 3 },
-            rotateZ: { duration: 9, repeat: Infinity, ease: "easeInOut", delay: 3 }
+            y: { duration: 13, repeat: Infinity, ease: "easeInOut", delay: 3 },
+            x: { duration: 18, repeat: Infinity, ease: "easeInOut", delay: 4 },
+            rotateZ: { duration: 15, repeat: Infinity, ease: "easeInOut", delay: 3 }
           }}
         >
-          <Code2 size={28} />
+          <Code2 size={34} />
         </motion.div>
 
         <motion.div
-          className="absolute bottom-1/4 right-1/4 text-secondary/30"
+          className="absolute bottom-1/4 right-1/4 text-secondary/40"
           initial={{ scale: 0, rotate: -180 }}
           animate={{
-            scale: 1,
-            rotate: 0,
-            y: [0, -14, 0],
-            rotateZ: [0, 12, 0]
+            scale: [1, 0.9, 1.5, 1],
+            rotate: [0, 75, -90, 45, 0],
+            y: [0, -22, 18, -14, 0],
+            x: [0, 40, -25, 30, 0],
+            rotateZ: [0, 15, -20, 12, 0]
           }}
           transition={{ 
             scale: { type: "spring", damping: 15, stiffness: 120, delay: 3.5 },
             rotate: { type: "spring", damping: 15, stiffness: 120, delay: 3.5 },
-            y: { duration: 10, repeat: Infinity, ease: "easeInOut", delay: 4 },
-            rotateZ: { duration: 10, repeat: Infinity, ease: "easeInOut", delay: 4 }
+            y: { duration: 12, repeat: Infinity, ease: "easeInOut", delay: 4 },
+            x: { duration: 20, repeat: Infinity, ease: "easeInOut", delay: 5 },
+            rotateZ: { duration: 14, repeat: Infinity, ease: "easeInOut", delay: 4 }
           }}
         >
-          <TrendingUp size={30} />
+          <TrendingUp size={36} />
         </motion.div>
 
         <motion.div
-          className="absolute top-3/4 left-1/3 text-accent/30"
+          className="absolute top-3/4 left-1/3 text-accent/40"
           initial={{ scale: 0, rotate: -180 }}
           animate={{
-            scale: 1,
-            rotate: 0,
-            y: [0, -16, 0],
-            rotateZ: [0, -10, 0]
+            scale: [1, 1.3, 0.7, 1.1, 1],
+            rotate: [0, -150, 80, -60, 0],
+            y: [0, -28, 22, -16, 0],
+            x: [0, -35, 45, -25, 0],
+            rotateZ: [0, -18, 25, -10, 0]
           }}
           transition={{ 
             scale: { type: "spring", damping: 15, stiffness: 120, delay: 4 },
             rotate: { type: "spring", damping: 15, stiffness: 120, delay: 4 },
-            y: { duration: 11, repeat: Infinity, ease: "easeInOut", delay: 5 },
-            rotateZ: { duration: 11, repeat: Infinity, ease: "easeInOut", delay: 5 }
+            y: { duration: 15, repeat: Infinity, ease: "easeInOut", delay: 5 },
+            x: { duration: 22, repeat: Infinity, ease: "easeInOut", delay: 6 },
+            rotateZ: { duration: 17, repeat: Infinity, ease: "easeInOut", delay: 5 }
           }}
         >
-          <Zap size={26} />
+          <Zap size={32} />
+        </motion.div>
+
+        {/* Additional floating elements */}
+        <motion.div
+          className="absolute top-1/8 right-1/3 text-primary/35"
+          animate={{
+            rotate: [0, 360],
+            scale: [0.8, 1.6, 0.8],
+            y: [0, -40, 20, 0],
+            x: [0, 30, -20, 0],
+          }}
+          transition={{
+            duration: 24,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 6
+          }}
+        >
+          <motion.div className="w-6 h-6 border-2 border-current rounded-full" />
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-1/8 left-1/8 text-secondary/35"
+          animate={{
+            rotate: [0, -360],
+            scale: [1.2, 0.6, 1.8, 1.2],
+            y: [0, 35, -25, 0],
+            x: [0, -40, 30, 0],
+          }}
+          transition={{
+            duration: 26,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 7
+          }}
+        >
+          <motion.div className="w-4 h-8 bg-current rounded-lg" />
         </motion.div>
         
-        {/* Enhanced particle system */}
-        {Array.from({ length: 12 }).map((_, i) => (
+        {/* Dramatically Enhanced particle system */}
+        {Array.from({ length: 25 }).map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-primary/60 rounded-full"
+            className={`absolute rounded-full ${
+              i % 4 === 0 ? 'w-2 h-2 bg-primary/70' : 
+              i % 4 === 1 ? 'w-1.5 h-1.5 bg-secondary/60' :
+              i % 4 === 2 ? 'w-1 h-1 bg-accent/80' :
+              'w-3 h-3 bg-gradient-to-r from-primary/50 to-secondary/50'
+            }`}
             style={{
-              left: `${10 + Math.random() * 80}%`,
-              top: `${10 + Math.random() * 80}%`,
+              left: `${5 + Math.random() * 90}%`,
+              top: `${5 + Math.random() * 90}%`,
             }}
             animate={{
-              opacity: [0.2, 0.8, 0.2],
-              scale: [0.5, 2, 0.5],
-              y: [0, -50, 0],
+              opacity: [0.1, 1, 0.3, 0.8, 0.1],
+              scale: [0.3, 3, 1, 2.5, 0.3],
+              y: [0, -80 - Math.random() * 40, 40, -60, 0],
+              x: [0, Math.random() * 100 - 50, -Math.random() * 60, Math.random() * 80 - 40, 0],
+              rotate: [0, 180, -90, 270, 360],
             }}
             transition={{
-              duration: 5 + Math.random() * 3,
+              duration: 8 + Math.random() * 12,
               repeat: Infinity,
               ease: "easeInOut",
-              delay: Math.random() * 5,
+              delay: Math.random() * 8,
             }}
           />
         ))}
+
+        {/* Orbiting Elements */}
+        <motion.div
+          className="absolute top-1/2 left-1/2 w-96 h-96"
+          style={{ translateX: '-50%', translateY: '-50%' }}
+          animate={{ rotate: 360 }}
+          transition={{
+            duration: 60,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        >
+          <motion.div
+            className="absolute top-0 left-1/2 w-3 h-3 bg-primary/60 rounded-full"
+            style={{ translateX: '-50%' }}
+            animate={{
+              scale: [1, 2, 1],
+              opacity: [0.6, 1, 0.6],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+          <motion.div
+            className="absolute bottom-0 left-1/2 w-2 h-2 bg-secondary/60 rounded-full"
+            style={{ translateX: '-50%' }}
+            animate={{
+              scale: [1, 1.8, 1],
+              opacity: [0.4, 0.9, 0.4],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1.5
+            }}
+          />
+        </motion.div>
+
+        {/* Pulsing Energy Rings */}
+        <motion.div
+          className="absolute top-1/2 left-1/2 w-32 h-32 border border-accent/25 rounded-full"
+          style={{ translateX: '-50%', translateY: '-50%' }}
+          animate={{
+            scale: [1, 3, 1],
+            opacity: [0.8, 0, 0.8],
+            rotate: [0, 180],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeOut",
+          }}
+        />
+        
+        <motion.div
+          className="absolute top-1/2 left-1/2 w-48 h-48 border border-primary/20 rounded-full"
+          style={{ translateX: '-50%', translateY: '-50%' }}
+          animate={{
+            scale: [1, 4, 1],
+            opacity: [0.6, 0, 0.6],
+            rotate: [360, 0],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeOut",
+            delay: 2,
+          }}
+        />
+
+        <motion.div
+          className="absolute top-1/2 left-1/2 w-64 h-64 border border-secondary/15 rounded-full"
+          style={{ translateX: '-50%', translateY: '-50%' }}
+          animate={{
+            scale: [1, 5, 1],
+            opacity: [0.4, 0, 0.4],
+            rotate: [0, -360],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeOut",
+            delay: 4,
+          }}
+        />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">

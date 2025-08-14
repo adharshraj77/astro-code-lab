@@ -4,6 +4,7 @@ import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
+import Events from '@/components/Events';
 import Contact from '@/components/Contact';
 
 const Index = () => {
@@ -211,10 +212,11 @@ const Index = () => {
         {/* Projects Section - Core Feature */}
         <Projects />
         
+        {/* Events Section */}
+        <Events />
+        
         {/* Skills Section */}
         <Skills />
-        
-
         
         {/* Contact Section */}
         <Contact />
