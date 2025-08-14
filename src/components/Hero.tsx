@@ -515,7 +515,7 @@ const Hero = () => {
             </motion.button>
 
             <motion.button
-              onClick={() => window.open('/portfolio', '_blank')}
+              onClick={() => window.open('https://adharshportfoliob.vercel.app/', '_blank')}
               whileHover={{ 
                 scale: 1.05,
                 boxShadow: "0 20px 25px -5px rgba(16, 185, 129, 0.3)"
